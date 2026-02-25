@@ -1,0 +1,26 @@
+1. For the below given table: Write a query to group details based on Emp Grade and the Emp Salary should be greater than or equal 20000 and sort based on Emp Salary.
+
+Create Table Employee (
+    Emp_ID Int Primary Key,
+    Emp_Name Varchar(50),
+    Emp_Grade Char(1),
+    Emp_Salary Int
+);
+
+Insert Into Employee (Emp_ID, Emp_Name, Emp_Grade, Emp_Salary) Values
+(1, 'Sandhya', 'A', 35000),
+(2, 'Raj', 'B', 25800),
+(3, 'Ridhiya', 'A', 17600),
+(4, 'Kiki', 'B', 20000),
+(5, 'Kiwi', 'A', 15000);
+
+Select * From Employee;
+
+Select Emp_Grade,
+       Emp_ID,
+       Emp_Name,
+       Emp_Salary
+From Employee
+Where Emp_Salary >= 20000
+Group By Emp_Grade, Emp_ID, Emp_Name, Emp_Salary
+Order By Emp_Salary Asc;
