@@ -17,9 +17,9 @@ Insert Into Employee (Emp_ID, Emp_Name, Emp_Grade, Emp_Salary) Values
 Select * From Employee;
 
 Select Emp_Grade,
-    COUNT(Emp_ID) As Total_Employees,
-    SUM(Emp_Salary) As Total_Salary,
-    AVG(Emp_Salary) As Average_Salary
+    Count(Emp_ID) As Total_Employees,
+    Sum(Emp_Salary) As Total_Salary,
+    Avg(Emp_Salary) As Average_Salary
 From Employee
 Where Emp_Salary >= 20000
 Group By Emp_Grade
